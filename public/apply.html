@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply for Membership - The Calcutta Connoisseurs Circle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Link to external CSS file -->
+<link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+<header class="site-nav" id="main-nav">
+  <div class="nav-row">
+    <a href="index.html" class="brand">
+      <img src="./WhatsApp Image 2026-07-27 at 10.27.16 AM_4.jpeg" alt="Calcutta Connoisseurs Circle Logo" style="border-radius: 50%; object-fit: cover;">
+      <span class="brand-text">
+        <span class="name">The Calcutta Connoisseurs Circle</span>
+        <span class="sub">Return to Main Table</span>
+      </span>
+    </a>
+    <nav class="links" id="nav-links">
+      <a href="login.html" class="apply-btn" style="border-color: var(--hairline); color: var(--ledger-cream-2) !important;">Member Login</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding: 80px 0 60px;">
+  <div class="container hero-inner" style="text-align: center; max-width: 800px; margin: 0 auto;">
+    <div class="eyebrow on-dark" style="justify-content: center;">Membership Application</div>
+    <h1>Request a <em>seat</em>.</h1>
+    <p class="lede" style="margin: 24px auto 0;">Membership is granted by application and subject to the Circle's discretion. We review applications on a rolling basis, prioritizing a balance of palates and backgrounds.</p>
+  </div>
+</section>
+
+<section id="application-form" style="background:var(--ledger-cream);">
+  <div class="container" style="max-width: 800px;">
+    <div class="apply-form animate-on-scroll" style="margin-top: 0; background:var(--ledger-cream-2); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+      <h3>Formal Application</h3>
+      <p class="note">Please provide your details below. A custodian will reach out to schedule an introductory call if your application aligns with the current calendar intake.</p>
+      
+      <form onsubmit="alert('Thank you for your interest. Your application has been submitted for review.'); return false;">
+        <div class="form-grid" style="gap: 28px;">
+          <!-- Personal Details -->
+          <div>
+            <label for="fname">First Name</label>
+            <input id="fname" type="text" placeholder="As it should appear on your card" required>
+          </div>
+          <div>
+            <label for="lname">Last Name</label>
+            <input id="lname" type="text" placeholder="" required>
+          </div>
+          <div>
+            <label for="femail">Email Address</label>
+            <input id="femail" type="email" placeholder="you@example.com" required>
+          </div>
+          <div>
+            <label for="fphone">Phone / WhatsApp</label>
+            <input id="fphone" type="tel" placeholder="+91" required>
+          </div>
+          
+          <!-- Circle Details -->
+          <div class="full">
+            <hr style="border: 0; border-top: 1px solid var(--hairline); margin: 10px 0;">
+          </div>
+
+          <div>
+            <label for="ftier">Chapter of Interest</label>
+            <select id="ftier">
+              <option>Privilege Member</option>
+              <option>Mentor Member (Requires Nomination)</option>
+              <option>Undecided — Advise Me</option>
+            </select>
+          </div>
+          <div>
+            <label for="fnom">Nominated By (If applicable)</label>
+            <input id="fnom" type="text" placeholder="Name of existing member">
+          </div>
+
+          <div class="full">
+            <label for="fnote">A note on your interest in the Circle</label>
+            <textarea id="fnote" rows="5" placeholder="Tell us briefly about your interest in tasting, hosting, or why you wish to join our calendar." required></textarea>
+          </div>
+          
+          <div class="full">
+            <label for="fpref">Beverage Preferences (Optional)</label>
+            <textarea id="fpref" rows="2" placeholder="E.g., Single Malts, Old World Wines, Agave..."></textarea>
+          </div>
+        </div>
+        
+        <div style="margin-top: 32px; display: flex; justify-content: space-between; align-items: center;">
+          <p style="font-family: var(--mono); font-size: 10px; color: var(--smoke); max-width: 60%;">*All information is kept strictly confidential under the Sovereign Table Holdings privacy framework.</p>
+          <button type="submit" class="btn btn-primary">Submit Application</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer id="terms">
+  <div class="container animate-on-scroll">
+    <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+      <span>© 2026 The Calcutta Connoisseurs Circle, a Circle of The Sovereign Table Holdings. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="back.js"></script>
+</body>
+</html>
