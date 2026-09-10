@@ -76,19 +76,19 @@
     </div>
       </div>
       <div class="contact-card animate-on-scroll delay-2">
-        <form onsubmit="return false;">
+        <form action="https://formspree.io/f/xwlkaydv" method="POST">
           <div class="form-grid">
             <div class="full">
               <label for="cname">Name</label>
-              <input id="cname" type="text">
+              <input id="cname" name="name" type="text" required>
             </div>
             <div class="full">
               <label for="cemail">Email</label>
-              <input id="cemail" type="email">
+              <input id="cemail" name="email" type="email" required>
             </div>
             <div class="full">
               <label for="cmsg">Message</label>
-              <textarea id="cmsg" rows="4"></textarea>
+              <textarea id="cmsg" name="message" rows="4" required></textarea>
             </div>
           </div>
           <button type="submit" class="btn btn-primary" style="margin-top:20px;">Send Enquiry</button>
@@ -126,4 +126,4 @@
 
 <script src="back.js"></script>
 </body>
-</html> 
+</html>
