@@ -1458,3 +1458,49 @@ button:active {
 .social-icon:hover svg {
   transform: scale(1.1);
 }
+/* ==========================================================================
+   PARTNER ADVERTISEMENT BANNERS
+   ========================================================================== */
+.partners-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end; /* Aligns the bottom edges of all 3 containers */
+  gap: 48px; /* Increased gap for a cleaner look */
+  margin-top: 50px;
+}
+
+.small-partner-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 140px; /* Locks the width so they are evenly spaced */
+  transition: var(--transition-smooth);
+}
+
+.small-partner-banner:hover {
+  transform: translateY(-2px); 
+}
+
+.partner-label {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--oxblood);
+  margin-bottom: 16px;
+  text-align: center;
+  line-height: 1.4;
+  height: 28px; /* Forces both text blocks to take up the exact same vertical space */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.small-partner-banner img {
+  width: 100%;
+  height: 70px; /* Forces all 3 logos into an identical bounding box */
+  object-fit: contain; /* Prevents stretching */
+  object-position: center bottom; /* Anchors the logos to a perfect horizontal baseline */
+}
