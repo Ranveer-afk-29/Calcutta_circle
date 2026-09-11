@@ -10,7 +10,7 @@
 <!-- Link to external CSS file -->
 <link rel="stylesheet" href="design.css">
 </head>
-<body>
+<body class="on-dark">
 
 <header class="site-nav" id="main-nav">
   <div class="nav-row">
@@ -24,36 +24,59 @@
   </div>
 </header>
 
-<section class="on-dark auth-section reveal">
-  <div class="auth-box animate-on-scroll">
-    <div class="section-head" style="margin-bottom: 32px; text-align: center;">
-      <div class="eyebrow on-dark" style="justify-content: center;">Member Portal</div>
-      <h2 style="color:var(--ledger-cream); font-size: 28px;">Your table awaits</h2>
-      <p style="color:rgba(239,232,216,0.7); font-size: 15px;">Access your digital card, RSVPs, and cellar notes.</p>
+<!-- ========================================== -->
+<!-- TEMPORARY LAUNCHING SOON LANDING PAGE      -->
+<!-- ========================================== -->
+<section class="on-dark auth-section reveal" id="temp-launch-page">
+  <div class="animate-on-scroll" style="width: 100%; max-width: 600px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center;">
+    
+    <!-- Launching Soon Poster -->
+    <img src="C:\Users\boogi\popps_website\TCCC_Launching Soon.jpeg" alt="The Calcutta Connoisseurs Circle - Launching Soon" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.6);">
+    
+    <!-- Return Home Button -->
+    <div style="margin-top: 40px;">
+        <a href="index.html" class="btn btn-ghost">Return Home</a>
     </div>
-
-    <!-- Form now redirects to member-portal.html -->
-    <form onsubmit="window.location.href='member-portal.html'; return false;">
-      <div class="form-grid">
-        <div class="full">
-          <label for="login-email">Membership Email or ID</label>
-          <input id="login-email" type="email" placeholder="CCC · 2026 · XXXXXX" required>
-        </div>
-        <div class="full">
-          <label for="login-pass">Private Access Key</label>
-          <input id="login-pass" type="password" placeholder="••••••••" required>
-        </div>
-        <div class="full">
-          <button type="submit" class="btn btn-primary" style="width: 100%;">Enter Portal</button>
-        </div>
-      </div>
-    </form>
-
-    <div class="auth-links" style="justify-content: flex-end;">
-      <a href="#">Forgot Access Key?</a>
-    </div>
+    
   </div>
 </section>
+
+<!-- ========================================== -->
+<!-- ORIGINAL LOGIN CODE (HIDDEN TEMPORARILY)   -->
+<!-- ========================================== -->
+<div style="display: none;" id="original-login-code">
+  <section class="on-dark auth-section reveal">
+    <div class="auth-box animate-on-scroll">
+      <div class="section-head" style="margin-bottom: 32px; text-align: center;">
+        <div class="eyebrow on-dark" style="justify-content: center;">Member Portal</div>
+        <h2 style="color:var(--ledger-cream); font-size: 28px;">Your table awaits</h2>
+        <p style="color:rgba(239,232,216,0.7); font-size: 15px;">Access your digital card, RSVPs, and cellar notes.</p>
+      </div>
+
+      <!-- Form now redirects to member-portal.html -->
+      <form onsubmit="window.location.href='member-portal.html'; return false;">
+        <div class="form-grid">
+          <div class="full">
+            <label for="login-email">Membership Email or ID</label>
+            <input id="login-email" type="email" placeholder="CCC · 2026 · XXXXXX" required>
+          </div>
+          <div class="full">
+            <label for="login-pass">Private Access Key</label>
+            <input id="login-pass" type="password" placeholder="••••••••" required>
+          </div>
+          <div class="full">
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Enter Portal</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="auth-links" style="justify-content: flex-end;">
+        <a href="#">Forgot Access Key?</a>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- END OF HIDDEN LOGIN CODE -->
 
 <script src="back.js"></script>
 </body>
