@@ -1461,13 +1461,20 @@ button:active {
 /* ==========================================================================
    PARTNER ADVERTISEMENT BANNERS
    ========================================================================== */
+.partner-divider {
+  border: 0;
+  border-top: 1px solid var(--oxblood);
+  opacity: 0.15;
+  margin: 80px 0 40px; /* Provides ample breathing room between the form and logos */
+}
+
 .partners-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end; /* Aligns the bottom edges of all 3 containers */
-  gap: 48px; /* Increased gap for a cleaner look */
-  margin-top: 50px;
+  justify-content: space-between; /* Pushes the logos away from the center, like the photo */
+  align-items: flex-end; 
+  gap: 32px; 
+  width: 100%;
 }
 
 .small-partner-banner {
@@ -1475,7 +1482,8 @@ button:active {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  width: 140px; /* Locks the width so they are evenly spaced */
+  flex: 1 1 200px; /* Allows the banners to scale dynamically */
+  max-width: 250px;
   transition: var(--transition-smooth);
 }
 
@@ -1492,7 +1500,7 @@ button:active {
   margin-bottom: 16px;
   text-align: center;
   line-height: 1.4;
-  height: 28px; /* Forces both text blocks to take up the exact same vertical space */
+  height: 28px; 
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1500,7 +1508,7 @@ button:active {
 
 .small-partner-banner img {
   width: 100%;
-  height: 70px; /* Forces all 3 logos into an identical bounding box */
-  object-fit: contain; /* Prevents stretching */
-  object-position: center bottom; /* Anchors the logos to a perfect horizontal baseline */
+  height: 80px; /* Adjusted slightly larger for the full-width layout */
+  object-fit: contain; 
+  object-position: center bottom; 
 }
