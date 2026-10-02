@@ -1625,3 +1625,30 @@ button:active {
     padding: 0 24px;
   }
 }
+/* ==========================================================================
+   GLOBAL SPONSORS IMAGE BANNER
+   ========================================================================== */
+.global-sponsors-image {
+  width: 100%;
+  background: #ffffff;
+  padding: 40px 20px;
+  border-top: 1px solid var(--hairline);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -1px; /* Connects seamlessly to the dark footer */
+}
+
+.global-sponsors-image img {
+  width: 100%;
+  max-width: 1200px; /* Prevents the image from stretching too wide on massive screens */
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .global-sponsors-image {
+    padding: 24px 16px;
+  }
+}
