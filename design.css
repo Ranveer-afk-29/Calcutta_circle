@@ -1512,3 +1512,116 @@ button:active {
   object-fit: contain; 
   object-position: center bottom; 
 }
+/* ==========================================================================
+   MOBILE RESPONSIVENESS & FORMATTING
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* 1. Header & Navigation */
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+    position: relative;
+  }
+  
+  .links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--ink);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+  }
+  
+  /* back.js toggles either 'open' or 'active' depending on the script block */
+  .links.open, 
+  .links.active {
+    transform: translateY(0);
+  }
+  
+  .links a {
+    font-size: 1.125rem;
+  }
+
+  /* 2. Global Spacing & Containers */
+  .container {
+    padding: 0 20px;
+  }
+  
+  .nav-row {
+    padding: 0 20px;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+
+  /* 3. Hero Section */
+  .hero {
+    padding: 140px 0 60px;
+  }
+  
+  .hero .lede {
+    font-size: 1.1rem;
+    margin: 20px 0 32px;
+  }
+  
+  .hero-strip {
+    margin-top: 48px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* 4. Form & Cards Adjustments */
+  .tier-card, 
+  .apply-form, 
+  .contact-card, 
+  .auth-box {
+    padding: 32px 20px;
+  }
+
+  /* 5. Footer Stacking */
+  .footer-top {
+    gap: 40px;
+  }
+  
+  .footer-cols {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    gap: 16px;
+  }
+  
+  /* 6. Contact Partners Grid */
+  .partners-wrapper {
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .small-partner-banner {
+    flex: 1 1 100%;
+    max-width: 200px;
+  }
+}
+
+/* Intermediate Tablet Breakpoint */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .links {
+    gap: 16px;
+  }
+  .links a {
+    font-size: 0.75rem;
+  }
+  .container {
+    padding: 0 24px;
+  }
+}
