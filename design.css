@@ -1652,3 +1652,66 @@ button:active {
     padding: 24px 16px;
   }
 }
+/* ==========================================================================
+   MOBILE HEADER & MENTOR CROPPING FIXES
+   ========================================================================== */
+
+/* --- 1. Fix Header Text Cropping & Menu Scrolling --- */
+@media (max-width: 768px) {
+  .brand {
+    gap: 12px;
+    max-width: 85%; /* Leaves space for the hamburger menu button */
+  }
+  
+  .brand img {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0; /* Prevents the circular logo from squishing */
+  }
+  
+  .brand-text .name {
+    white-space: normal !important; /* Allows long titles to wrap naturally */
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+  
+  .brand-text .sub {
+    white-space: normal !important; /* Allows the subtitle to wrap */
+    font-size: 0.65rem;
+    line-height: 1.4;
+    margin-top: 2px;
+  }
+
+  /* Ensures the open mobile menu can be scrolled if the screen is very small */
+  .links {
+    overflow-y: auto; 
+    padding: 80px 20px 40px; 
+  }
+}
+
+/* --- 2. Fix Mentor Head Cropping --- */
+/* Removes fixed heights that force landscape crops on mobile, using a portrait ratio instead */
+.mentor-frame,
+.small-card .mentor-frame {
+  height: auto !important; 
+  aspect-ratio: 4 / 5; /* Standard portrait photography ratio */
+  width: 100%;
+}
+
+/* Applies the portrait fix to the Celebrity Mentor only on mobile screens */
+@media (max-width: 799px) {
+  .celebrity-mentor-card .cm-frame {
+    height: auto !important;
+    aspect-ratio: 4 / 5;
+    width: 100%;
+  }
+}
+
+/* Ensures images fill the new responsive ratio and anchor to the top */
+.mentor-frame img,
+.cm-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center !important; /* Protects heads from being cropped */
+}
